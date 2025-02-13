@@ -1,4 +1,4 @@
-{ lib, ... }:
+_:
 
 {
   imports = [
@@ -12,9 +12,17 @@
       enable = true;
       efi.enable = true;
     };
-    services.grafana = {
-      enable = true;
-      logo = true;
+
+    services = {
+      prometheus = {
+        enable = true;
+        node-exporter.enable = true;
+      };
+
+      grafana = {
+        enable = true;
+        logo = true;
+      };
     };
   };
 }
