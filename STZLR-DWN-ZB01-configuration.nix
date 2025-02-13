@@ -1,4 +1,4 @@
-{pkgs, ...}:
+_:
 
 {
   imports = [
@@ -6,8 +6,6 @@
   ];
 
   networking.hostName = "STZLR-DWN-ZB01"; # Define your hostname.
-
-  # services.zabbixServer.package = pkgs.zabbix70.server-pgsql;
 
   megacorp = {
     config = {
