@@ -9,21 +9,23 @@
   };
 
   outputs = { nixpkgs, megacorp, ... }: let 
-    lib = nixpkgs.lib;
+    inherit (nixpkgs.lib)
+      nixosSystem
+      ;
   in {
     nixosConfigurations = {
-      STZLR-DWN-ZB01 = lib.nixosSystem {
+      STZLR-DWN-ZB01 = nixosSystem {
         modules = [
           megacorp.nixosModules.default
-          ./STZLR-DWN-ZB01.nix
-          ./hardware-configuration.nix
+          ./STZLR-DWN-ZB01-configuration.nix
+          ./STZLR-DWN-ZB01-hardware-configuration.nix
         ]; 
       };  
-      STZLR-DWN-GF01 = lib.nixosSystem {
+      STZLR-DWN-GF01 = nixosSystem {
         modules = [
           megacorp.nixosModules.default
-          ./STZLR-DWN-GF01.nix
-          ./hardware-configuration.nix
+          ./STZLR-DWN-GF01-configuration.nix
+          ./STZLR-DWN-GF01-hardware-configuration.nix
         ]; 
       };  
     };

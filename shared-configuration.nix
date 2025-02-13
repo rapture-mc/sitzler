@@ -7,18 +7,22 @@ _:
     "flakes"
   ];
 
-  megacorp.config = {
-    nixvim.enable = true;
-    packages.enable = true;
-    users = {
+  megacorp = {
+    services.comin = {
       enable = true;
-      admin-user = "sitzler";
+
+      repo = "git@github.com:rapture-mc/sitzler";
+    };
+
+    config = {
+      nixvim.enable = true;
+      packages.enable = true;
+      users = {
+        enable = true;
+        admin-user = "sitzler";
+      };
     };
   };
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
