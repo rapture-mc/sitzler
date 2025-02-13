@@ -7,10 +7,6 @@
 
   networking.hostName = "STZLR-DWN-ZB01"; # Define your hostname.
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   services.zabbixServer.package = pkgs.zabbix70.server-pgsql;
 
   megacorp = {
