@@ -11,7 +11,7 @@ _:
     services.comin = {
       enable = true;
 
-      repo = "git@github.com:rapture-mc/sitzler";
+      repo = "https://github.com/rapture-mc/sitzler";
     };
 
     config = {
