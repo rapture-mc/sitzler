@@ -15,12 +15,18 @@
 
   megacorp = {
     config = {
-      nixvim.enable = true;
-      packages.enable = true;
+      bootloader = {
+        enable = true;
+        efi.enable = true;
+      };
+
       users = {
         enable = true;
         admin-user = "sitzler";
       };
+
+      nixvim.enable = true;
+      packages.enable = true;
     };
 
     services.zabbix = {
