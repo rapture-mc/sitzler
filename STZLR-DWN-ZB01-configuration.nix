@@ -23,10 +23,14 @@ _:
       packages.enable = true;
     };
 
-    services.zabbix = {
-      agent.enable = true;
+    services = {
+      comin.branch = "dev";
 
-      server.enable = true;
+      zabbix = {
+        agent.enable = true;
+
+        server.enable = true;
+      };
     };
   };
 }
