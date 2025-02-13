@@ -23,10 +23,10 @@
       };
     };
 
-    # services.zabbix = {
-    #   agent.enable = true;
-    #
-    #   server.enable = true;
-    # };
+    services.zabbix = {
+      agent.enable = true;
+
+      server.enable = true;
+    };
   };
 }
