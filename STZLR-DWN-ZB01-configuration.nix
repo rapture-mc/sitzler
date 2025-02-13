@@ -7,6 +7,8 @@
 
   networking.hostName = "STZLR-DWN-ZB01"; # Define your hostname.
 
+  # services.zabbixServer.package = pkgs.zabbix70.server-pgsql;
+
   megacorp = {
     config = {
       bootloader = {
@@ -23,10 +25,10 @@
       packages.enable = true;
     };
 
-    # services.zabbix = {
-    #   agent.enable = true;
-    #
-    #   server.enable = true;
-    # };
+    services.zabbix = {
+      agent.enable = true;
+
+      server.enable = true;
+    };
   };
 }
