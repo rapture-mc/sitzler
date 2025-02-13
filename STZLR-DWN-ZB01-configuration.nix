@@ -1,4 +1,4 @@
-{pkgs, ...}:
+_:
 
 {
   imports = [
@@ -10,8 +10,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  services.zabbixServer.package = pkgs.zabbix70.server-pgsql;
 
   megacorp = {
     config = {
